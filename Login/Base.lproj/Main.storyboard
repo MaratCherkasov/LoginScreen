@@ -56,7 +56,7 @@
                                                     <constraint firstAttribute="width" secondItem="YxV-Zr-HHA" secondAttribute="height" multiplier="1:1" id="Azs-qq-5kg"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e-email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mv5-ei-UGg">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mv5-ei-UGg">
                                                 <rect key="frame" x="53" y="0.0" width="280" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -93,10 +93,10 @@
                                                     <constraint firstAttribute="width" secondItem="32B-L8-YS6" secondAttribute="height" multiplier="1:1" id="SCh-1N-jtm"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-SJ-scA">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-SJ-scA">
                                                 <rect key="frame" x="53" y="0.0" width="280" height="45"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,7 +132,7 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="PCZ-sg-52a" kind="show" id="gIm-Ie-1Lu"/>
+                                            <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eWP-5l-jRU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -153,6 +153,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Sign up">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signUpButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFM-O8-RBj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -179,6 +182,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4vp-Rv-9hi"/>
+                    <connections>
+                        <outlet property="eMailTextField" destination="mv5-ei-UGg" id="1sT-qa-Axj"/>
+                        <outlet property="eMailView" destination="NqZ-wq-SJl" id="Arr-iP-anp"/>
+                        <outlet property="loginButton" destination="uDg-6x-v8L" id="6Rd-Ne-iY7"/>
+                        <outlet property="passwordTextField" destination="l1m-SJ-scA" id="r5i-0f-bS8"/>
+                        <outlet property="passwordView" destination="Qpk-Pv-fri" id="mLT-h9-h9y"/>
+                        <outlet property="signUpButton" destination="Gg6-kZ-h3Z" id="4KB-jx-JOm"/>
+                        <outlet property="textLabel" destination="aug-ZP-vBw" id="dJB-Qv-O1m"/>
+                        <segue destination="PCZ-sg-52a" kind="show" identifier="goToNextScreen" id="CXF-nF-F2N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
